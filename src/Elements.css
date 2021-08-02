@@ -1,0 +1,39 @@
+.element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  padding: 20px;
+  width: 100%;
+  max-height: 400px;
+  min-width: 100px;
+  background-color: white;
+  z-index: 1;
+}
+
+.element {
+  transition: transform 500ms;
+  will-change: transform;
+}
+
+.element:hover {
+  transform: translateY(-5px);
+}
+*
+/*  */
+.element {
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+}
+.element:hover,
+.element:focus,
+.element:active {
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+}

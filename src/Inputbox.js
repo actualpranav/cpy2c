@@ -15,6 +15,7 @@ function Inputbox() {
   };
 
   return (
+   <div>
     <div className="container">
       <input
         type="text"
@@ -30,6 +31,13 @@ function Inputbox() {
           </span>
         </div>
       </CopyToClipboard>
+      
+    </div>
+    <div>
+      <h3
+        >{text}
+        </h3>
+        </div>
     </div>
   );
 }
