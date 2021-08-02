@@ -10,7 +10,7 @@ function Checkout() {
       <div className="checkout__left">
         <div>
           <h4>hello {user?.email}</h4>
-          <h2 className="checkout__title">Your list</h2>
+          <h4 className="checkout__title">Your list</h4>
           {basket.map((item) => (
             <Checkoutlist id={item.id} />
           ))}

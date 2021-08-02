@@ -18,6 +18,7 @@ function Elements({ id }) {
       <div className="element__info">
         <p>{id}</p>
       </div>
+      {/* {addToBasket} */}
       <button className="glow-on-hover" onClick={addToBasket}>
         Add to list
       </button>

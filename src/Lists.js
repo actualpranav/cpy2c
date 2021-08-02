@@ -29,7 +29,7 @@ function Lists() {
 
   return (
     <div className="lists">
-      <h1>Your list</h1>
+      <h4>Your list</h4>
       <div className="ListOut__ListOut">
         {lists?.map((list) => (
           <ListOut list={list} />
