@@ -1,25 +1,48 @@
-import logo from './logo.svg';
+// import React from 'react';
+import { React, useState } from 'react';
+
+
+import Inputbox from "./Inputbox";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import './App.css';
 
-function App() {
+export default function App() {
+
+  //   const [{}, dispatch] = useStateValue();
+  // useEffect(() => {
+  //   //only runs once when the app component loads...
+  //   auth.onAuthStateChanged((authUser) => {
+  //     console.log("the user is >>>", authUser);
+  //     if (authUser) {
+  //       //the user just logged in/ was logged in
+  //       dispatch({
+  //         type: "SET_USER",
+  //         user: authUser,
+  //       });
+  //     } else {
+  //       //the user is logged out
+  //       dispatch({
+  //         type: "SET_USER",
+  //         user: null,
+  //       });
+  //     }
+  //   });
+  // }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    //BEM convention
+    <Router>
+      <div className="app">
+        <Switch>
+          <Route path="/">
+            <Inputbox />
+          </Route>
+          {/* <Route path="/">
+            <Header />
+            <Home />
+          </Route> */}
+        </Switch>
+      </div>
+    </Router>
   );
 }
-
-export default App;
